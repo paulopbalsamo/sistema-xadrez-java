@@ -4,8 +4,8 @@ public class Tabuleiro {
 
 	private int qtdeLinhas;
 	private int qtdeColunas;
-	private Peca [][] pecas;
-	
+	private Peca[][] pecas; //matriz de peças
+
 	public Tabuleiro(int qtdeLinhas, int qtdeColunas) {
 		super();
 		this.qtdeLinhas = qtdeLinhas;
@@ -28,10 +28,13 @@ public class Tabuleiro {
 	public void setQtdeColunas(int qtdeColunas) {
 		this.qtdeColunas = qtdeColunas;
 	}
-	
-	
-	
-	
-	
-	
+
+	public Peca peca(int linha, int coluna) {
+		return pecas[linha][coluna];
+	}
+
+	public Peca peca(Posicao posicao) {
+		return pecas[posicao.getLinha()][posicao.getColuna()];
+	}
+
 }
